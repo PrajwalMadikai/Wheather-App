@@ -1,60 +1,260 @@
-.container{
-    width: 600px;
-    height: 600px;
-    background-color: rgb(0,212,255);
-    background: linear-gradient(200deg, rgba(0,212,255,1) 0%, rgba(87,87,119,1) 71%, rgba(2,0,36,1) 100%);
-    border-radius: 3%;
-    /* position: absolute;
-    left: 40%;
-    top:55px; */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
-.container{
-    display:block;
-    text-align: center;
-    justify-content: space-between;
+
+body, html {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: Arial, sans-serif;
+   background-color: #f4f6f9;
 }
-.container button{
-    margin-top: 20px;
-    mix-blend-mode: color-burn;
-    border:0px;
-cursor: pointer;
+
+.container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   width: 100%;
 }
-#input{
-    margin-left: 2%;
-    margin-top:20px ;
-    width: 200px;
-    height: 25px;
-    border-radius: 90px;
-    text-align: center;
-    border: none;
+
+.content {
+   text-align: center;
+   padding: 20px;
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   width: 300px;
 }
-#image{
-    width:30px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    
+
+.form {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px;
 }
- .mainbody img{
-    width:160px;
+
+.input {
+   padding: 10px;
+   border: 1px solid #ddd;
+   border-radius: 5px 0 0 5px;
+   outline: none;
+   flex: 1;
+}
+
+.button {
+   padding: 10px 15px;
+   border: none;
+   background-color: #007bff;
+   color: white;
+   border-radius: 0 5px 5px 0;
+   cursor: pointer;
+}
+
+.button:hover {
+   background-color: #0056b3;
+}
+
+.mainbody {
+   margin-bottom: 20px;
+}
+
+.weather-icon {
+   width: 80px;
+   height: auto;
+}
+
+.temperature {
+   font-size: 24px;
+   margin-top: 10px;
+   color: #333;
+}
+
+.info {
+   padding-top: 70px;
+   display: flex;
+   justify-content: space-around;
+   margin-top: 20px;
+}
+
+.info-box {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.icon {
+   width: 40px;
+   height: auto;
+}
+
+p {
+   margin: 5px 0;
+   color: #555;
+}
+.mainbody{
+   padding-top: 30px;
+}
+
+/* search section  */
+/* From Uiverse.io by Galahhad */ 
+.search-label {
+   display: flex;
+   align-items: center;
+   box-sizing: border-box;
+   position: relative;
+   border: 1px solid transparent;
+   border-radius: 12px;
+   overflow: hidden;
+   background: #3D3D3D;
+   padding: 9px;
+   cursor: text;
  }
- .con{
-    display:flex;
-    
+ 
+ .search-label:hover {
+   border-color: gray;
  }
- .one img{
-    width: 70px;
+ 
+ .search-label:focus-within {
+   background: #464646;
+   border-color: gray;
  }
- .two img{
-    width: 70px;
+ 
+ .search-label input {
+   outline: none;
+   width: 100%;
+   border: none;
+   background: none;
+   height: 20px;
+   color: rgb(255, 255, 255);
  }
- .one{
-    position: absolute;
-    left: 100px;
-    margin-top:6%;
+ 
+ 
+ .search-label input:focus+.slash-icon,
+ .search-label input:valid+.slash-icon {
+   display: none;
  }
- .two{
-    position: absolute;
-    left: 400px; 
-       margin-top:6%;
+ 
+ .search-label input:valid~.search-icon {
+   display: block;
  }
+ 
+ .search-label input:valid {
+   width: calc(100% - 22px);
+   transform: translateX(20px);
+ }
+ 
+ .search-label svg,
+ .slash-icon {
+   position: absolute;
+   color: #000000;
+ }
+ 
+ .search-icon {
+   display: none;
+   width: 12px;
+   height: auto;
+ }
+ 
+ .slash-icon {
+   right: 7px;
+   border: 1px solid #393838;
+   background: linear-gradient(-225deg, #343434, #6d6d6d);
+   border-radius: 3px;
+   text-align: center;
+   box-shadow: inset 0 -2px 0 0 #3f3f3f, inset 0 0 1px 1px rgb(94, 93, 93), 0 1px 2px 1px rgba(28, 28, 29, 0.4);
+   cursor: pointer;
+   font-size: 12px;
+   width: 15px;
+ }
+ 
+ .slash-icon:active {
+   box-shadow: inset 0 1px 0 0 #3f3f3f, inset 0 0 1px 1px rgb(94, 93, 93), 0 1px 2px 0 rgba(28, 28, 29, 0.4);
+   text-shadow: 0 1px 0 #7e7e7e;
+   color: transparent;
+ }
+
+ /* button  */
+ button {
+   /* padding: 5px 25px; */
+   margin-left: 10px;
+   width:  110px;
+   height: 50px;
+   border: unset;
+   border-radius: 40px;
+   color: #212121;
+   z-index: 1;
+   background: #e8e8e8;
+   position: relative;
+   font-weight: 1000;
+   font-size: 13px;
+   -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+   box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+   transition: all 250ms;
+   overflow: hidden;
+  }
+  
+  button::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 0;
+   border-radius: 15px;
+   background-color: #212121;
+   z-index: -1;
+   -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+   box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+   transition: all 250ms
+  }
+  
+  button:hover {
+   color: #e8e8e8;
+  }
+  
+  button:hover::before {
+   width: 100%;
+  }
+
+  /* card */
+  /* From Uiverse.io by adamgiebl */ 
+.card {
+   width: 500px;
+   height: 500px;
+   border-radius: 30px;
+   background: #e0e0e0;
+   box-shadow: 15px 15px 30px #bebebe,
+              -15px -15px 30px #ffffff;
+ }
+
+ /* error message  */
+ /* Style for error message at the top of the card */
+/* Error message styling */
+.error {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   width: 100%;
+   max-width: 320px; /* Keep it centered within card */
+   padding: 12px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: start;
+   background: #f23528; /* Background color for error */
+   color: white; /* Text color for contrast */
+   border-radius: 8px;
+   box-shadow: 0px 0px 5px -3px #111;
+   position: absolute; /* Position it above card content */
+   top: -50px; /* Position above card */
+   left: 50%;
+   transform: translateX(-50%); /* Center it horizontally */
+   z-index: 10; /* Ensure it appears above card content */
+}
+
+/* Adjust .content.card to allow space for error message */
+.content.card {
+   position: relative;
+   padding-top: 50px; /* Leave room for error message if it appears */
+}
